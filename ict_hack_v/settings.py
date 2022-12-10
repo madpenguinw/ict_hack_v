@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'backend',
     'corsheaders',
-    'django.contrib.admin',
+    'django.contrib.admin',  # Need to comment it before migrations
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -106,4 +106,16 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ]
+}
+
+AUTH_USER_MODEL = 'backend.User'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        "json": {
+            '()': 'json_log_formatter.JSONFormatter',
+        }
+    },
 }

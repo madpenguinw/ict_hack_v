@@ -5,3 +5,4 @@ django-extra-fields
 django-cors-headers
 isort
 flake8
+json_log_formatter
