@@ -1,12 +1,12 @@
 import logging
 from http import HTTPStatus
 
-from django.shortcuts import get_object_or_404, get_list_or_404
+from django.shortcuts import get_list_or_404, get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 import app_logger
-from backend.models import Company, Project, Student, Participants
+from backend.models import Company, Participants, Project, Student
 
 logger = logging.getLogger(__name__)
 
@@ -68,7 +68,6 @@ class GetOneProject(APIView):
 
 class GetOneStudent(APIView):
     def fill_participant_dict(self, participant):
-        
         project_id = participant.project.id
         project_title = participant.project.title
         project_description = participant.project.description
