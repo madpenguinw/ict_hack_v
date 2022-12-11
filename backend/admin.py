@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from backend.models import (Company, Participants, Skill,
-                            Student, Project, User)
+from backend.models import Company, Participants, Project, Skill, Student, User
 
 # from backend.models import (User)
 

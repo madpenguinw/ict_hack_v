@@ -5,6 +5,7 @@ import sys
 
 import app_logger
 
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ict_hack_v.settings")
