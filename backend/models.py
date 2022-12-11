@@ -61,18 +61,6 @@ class User(AbstractUser):
 
 
 class Student(User):
-    # first_name = models.CharField(
-    #     verbose_name='Имя',
-    #     max_length=50,
-    #     blank=False,
-    #     unique=False,
-    # )
-    # last_name = models.CharField(
-    #     verbose_name='Фамилия',
-    #     max_length=50,
-    #     blank=False,
-    #     unique=False,
-    # )
     patronymic = models.CharField(
         verbose_name='Отчество',
         max_length=50,
@@ -189,26 +177,11 @@ class Project(models.Model):
         blank=False,
         unique=False,
     )
-    # host_student = models.ForeignKey(
-    #     Student,
-    #     on_delete=models.CASCADE,
-    #     related_name='host_student',
-    #     blank=True,
-    # )
 
     class Meta:
         ordering = ('title',)
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекты'
-        # constraints = [
-        #     models.UniqueConstraint(
-        #         fields=['host_student', 'id'],
-        #         name='unique_host_student_for_project'
-        #     ),
-        #     models.UniqueConstraint(
-        #         fields=['host_company', 'id'],
-        #         name='unique_host_company_for_project'
-        #     )]
 
     def __str__(self):
         return self.title
