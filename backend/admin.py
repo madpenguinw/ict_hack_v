@@ -41,7 +41,7 @@ class SkillAdmin(admin.ModelAdmin):
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 'description', 'precondition',
+        'id', 'title', 'description', 'precondition',
         'result', 'criterias', 'host_company',
     )
     # list_display = [field.name for field in Project._meta.get_fields()]
